@@ -17,13 +17,15 @@ class App extends Component {
     //tomar una copia del state actual
     const gastos = {...this.state.gastos};
 
-    console.log('Se agrego el gasto' + gasto);
-    console.log(gastos);
-     
-
     //agregar al gasto al state
+    gastos[`gastos${Date.now()}`] = gasto;
+
+    console.log(gastos);
 
     //ponerlo en state
+    this.setState({
+      gastos
+    })
   }
 
   render(){
