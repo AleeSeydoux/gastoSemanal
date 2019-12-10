@@ -12,6 +12,15 @@ class App extends Component {
     gastos: {}
   }
 
+componentDidMount() {
+  this.obtenerPresupuesto();
+}
+obtenerPresupuesto = () => {
+  let presupuesto = prompt('Cual es el presupuesto?');
+
+  console.log(presupuesto);
+}
+
   //agregar un nuevo gasto al state
   agregarGasto = gasto => {
 
