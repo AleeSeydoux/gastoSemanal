@@ -21,9 +21,12 @@ obtenerPresupuesto = () => {
 
   let resultado = validarPresupuesto(presupuesto);
   if(resultado) {
-    console.log('Valido');
+    this.setState({
+      presupuesto: presupuesto,
+      restante: presupuesto
+    })
   }else {
-    console.log('Presupuesto no valido');
+    this.obtenerPresupuesto();
   }
 }
 
