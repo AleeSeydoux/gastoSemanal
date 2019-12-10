@@ -3,6 +3,7 @@ import '../css/App.css';
 import Header from './Header';
 import Formulario from './Formulario';
 import Listado from './Listado';
+import {validarPresupuesto} from '../helper';
 
 class App extends Component {
 
@@ -18,7 +19,12 @@ componentDidMount() {
 obtenerPresupuesto = () => {
   let presupuesto = prompt('Cual es el presupuesto?');
 
-  console.log(presupuesto);
+  let resultado = validarPresupuesto(presupuesto);
+  if(resultado) {
+    console.log('Valido');
+  }else {
+    console.log('Presupuesto no valido');
+  }
 }
 
   //agregar un nuevo gasto al state
