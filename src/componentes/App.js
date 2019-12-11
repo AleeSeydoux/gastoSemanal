@@ -39,13 +39,30 @@ obtenerPresupuesto = () => {
 
     //agregar al gasto al state
     gastos[`gastos${Date.now()}`] = gasto;
-
-    console.log(gastos);
+//restar al presupuesto
+    this.restarPresupuesto(gasto.cantidadGasto);
 
     //ponerlo en state
     this.setState({
       gastos
     })
+  }
+
+  //restar el presupuesto 
+  restarPresupuesto = cantidad => {
+    //leer el gasto
+    let restar = Number(cantidad);
+
+    //tomar copia del state actual
+    let restante = this.state.restante;
+
+    //restarlo
+    restante -= restar;
+    //agregamos al nuevo state
+    this.setState({
+      restante
+    })
+
   }
 
   render(){
