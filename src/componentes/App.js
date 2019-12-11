@@ -3,6 +3,7 @@ import '../css/App.css';
 import Header from './Header';
 import Formulario from './Formulario';
 import Listado from './Listado';
+import ControlPresupuesto from './ControlPresupuesto';
 import {validarPresupuesto} from '../helper';
 
 class App extends Component {
@@ -12,7 +13,7 @@ class App extends Component {
     restante:'',
     gastos: {}
   }
-  
+
 componentDidMount() {
   this.obtenerPresupuesto();
 }
@@ -64,6 +65,7 @@ obtenerPresupuesto = () => {
             <Listado
               gastos={this.state.gastos}
             />
+            <ControlPresupuesto/>
             </div>
 
           </div>
