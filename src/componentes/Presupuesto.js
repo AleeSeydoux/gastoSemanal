@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class Presupuesto extends Component {
     render(){
         return(
-            <p></p>
+            <p>desde presupuesto</p>
         )
     }
 }

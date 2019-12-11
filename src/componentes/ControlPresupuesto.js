@@ -1,9 +1,14 @@
 import React, {Component} from 'react';
+import Presupuesto from './Presupuesto';
+import Restante from './Restante';
 
 class ControlPresupuesto extends Component {
     render(){
         return(
-            <p>desde control</p>
+            <React.Fragment>
+                <Presupuesto/>
+                <Restante/>
+            </React.Fragment>
         )
     }
 }
