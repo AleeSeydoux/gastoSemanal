@@ -58,6 +58,8 @@ obtenerPresupuesto = () => {
 
     //restarlo
     restante -= restar;
+
+    restante = String(restante);
     //agregamos al nuevo state
     this.setState({
       restante
